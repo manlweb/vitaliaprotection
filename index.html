@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitalia Protection</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#07162b,#0b1f3a);
+    color:white;
+}
+
+/* HEADER */
+.header{
+    position:relative;
+    padding:40px 20px 80px;
+    text-align:center;
+}
+
+/* LOGOS */
+.logo-left{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+.logo-right{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.logo-left img,
+.logo-right img{
+    height:70px;
+    width:auto;
+    object-fit:contain;
+}
+
+/* TITULO */
+h1{
+    font-size:48px;
+    margin-top:60px;
+}
+
+.subtitle{
+    color:#00c46a;
+    font-size:20px;
+    margin-top:10px;
+}
+
+/* TEXTO */
+.desc{
+    max-width:700px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.5;
+}
+
+/* BOTONES */
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 22px;
+    margin:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-whatsapp{
+    background:#00c46a;
+    color:white;
+}
+
+.btn-mail{
+    border:2px solid #00c46a;
+    color:#00c46a;
+}
+
+/* SECCION */
+.section{
+    background:#f5f5f5;
+    color:#111;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    padding:20px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    h1{
+        font-size:32px;
+    }
+
+    .logo-left img,
+    .logo-right img{
+        height:50px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+    <!-- LOGO IZQUIERDA -->
+    <div class="logo-left">
+        <img src="logovp.jpeg">
+    </div>
+
+    <!-- LOGO DERECHA -->
+    <div class="logo-right">
+        <img src="logosm.webp">
+    </div>
+
+    <h1>Vitalia Protection</h1>
+    <div class="subtitle">Distribuidor autorizado de Seguros Monterrey</div>
+
+    <div class="desc">
+        Somos una organización dedicada al desarrollo de agentes profesionales en el sector asegurador,
+        con el respaldo de Seguros Monterrey.
+    </div>
+
+    <div class="buttons">
+        <a class="btn btn-whatsapp" href="https://wa.me/527221939613" target="_blank">
+            WhatsApp
+        </a>
+
+        <a class="btn btn-mail" href="mailto:recursos.humanos@vitaliaprotection.com.mx">
+            Enviar correo
+        </a>
+    </div>
+
+</div>
+
+<!-- BENEFICIOS -->
+<div class="section">
+    <h2>¿Por qué trabajar con nosotros?</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Ingresos sin límite</h3>
+            <p>Esquema por comisión sin tope.</p>
+        </div>
+
+        <div class="card">
+            <h3>Capacitación</h3>
+            <p>Formación constante para crecer.</p>
+        </div>
+
+        <div class="card">
+            <h3>Crecimiento</h3>
+            <p>Desarrollo profesional real.</p>
+        </div>
+
+        <div class="card">
+            <h3>Respaldo</h3>
+            <p>Apoyo de Seguros Monterrey.</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Vitalia Protection
+</div>
+
+</body>
+</html>
