@@ -153,11 +153,6 @@ body{
     background:#0f5677;
 }
 
-.form-box button:disabled{
-    opacity:0.7;
-    cursor:not-allowed;
-}
-
 .small{
     font-size:13px;
     color:#777;
@@ -187,7 +182,6 @@ body{
     border-radius:16px;
     text-align:center;
     max-width:420px;
-    animation:fadeIn 0.3s ease;
 }
 
 .check{
@@ -203,24 +197,6 @@ body{
     margin:0 auto 20px auto;
 }
 
-.modal button{
-    margin-top:20px;
-    padding:12px 22px;
-    border:none;
-    background:#0079c2;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.loader{
-    display:none;
-    margin-top:15px;
-    color:#0079c2;
-    font-weight:bold;
-}
-
 /* FAQ */
 
 .faq-container{
@@ -234,7 +210,6 @@ body{
     margin-bottom:15px;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .faq-question{
@@ -252,7 +227,6 @@ body{
     display:none;
     padding:0 20px 20px 20px;
     color:#555;
-    line-height:1.6;
 }
 
 /* FOOTER */
@@ -263,10 +237,9 @@ body{
     text-align:center;
     padding:25px 15px;
     font-size:14px;
-    border-top:1px solid rgba(255,255,255,0.08);
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 
 .whatsapp-float{
     position:fixed;
@@ -279,7 +252,7 @@ body{
     border-radius:50%;
     text-align:center;
     font-size:34px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
     z-index:9999;
     display:flex;
     align-items:center;
@@ -289,19 +262,7 @@ body{
 }
 
 .whatsapp-float:hover{
-    transform:scale(1.08);
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(10px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    transform:scale(1.1);
 }
 
 </style>
@@ -339,67 +300,11 @@ body{
 
 <div class="section">
 
-    <h2>¿Quiénes somos?</h2>
+<h2>¿Quiénes somos?</h2>
 
-    <p class="text">
-        Vitalia Protection es socio comercial de Seguros Monterrey New York Life dedicado a formar agentes profesionales y asesorar a personas en la protección de su patrimonio.
-        <br><br>
-        Nuestro enfoque combina desarrollo profesional, educación financiera y acompañamiento constante para lograr crecimiento real.
-    </p>
-
-</div>
-
-<!-- BENEFICIOS -->
-
-<div class="section">
-
-    <h2>¿Por qué trabajar con nosotros?</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>💰 Ingresos sin límite</h3>
-            <p>
-                Modelo basado en comisiones con crecimiento exponencial.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>📚 Capacitación constante</h3>
-            <p>
-                Te formamos desde cero hasta convertirte en un profesional.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>📈 Plan de carrera</h3>
-            <p>
-                Desarrollo estructurado con metas claras y crecimiento real.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🏢 Respaldo sólido</h3>
-            <p>
-                Trabajamos con una de las aseguradoras más fuertes del país.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- OPORTUNIDAD -->
-
-<div class="section">
-
-    <h2>Convierte tu talento en ingresos reales</h2>
-
-    <p class="text">
-        Si buscas independencia económica, crecimiento profesional y una carrera en el sector financiero, esta es tu oportunidad.
-        <br><br>
-        No necesitas experiencia previa, nosotros te capacitamos.
-    </p>
+<p class="text">
+Vitalia Protection es socio comercial de Seguros Monterrey New York Life dedicado a formar agentes profesionales y asesorar personas en protección financiera.
+</p>
 
 </div>
 
@@ -407,117 +312,56 @@ body{
 
 <div id="reclutamiento" class="section">
 
-    <h2>Únete como agente</h2>
+<h2>Únete como agente</h2>
 
-    <p class="text">
-        Da el primer paso hacia una carrera con ingresos ilimitados. Déjanos tus datos y uno de nuestros asesores te explicará cómo iniciar.
-    </p>
+<div class="form-box">
 
-    <div class="form-box">
+<form onsubmit="enviarFormulario(event, 'Agente')">
 
-        <form onsubmit="enviarFormulario(event, 'Agente')">
+<input type="hidden" name="tipo" value="Agente">
 
-            <input type="hidden" name="tipo" value="Agente">
+<input type="text" name="nombre" placeholder="Nombre completo" required>
 
-            <input type="text"
-            name="nombre"
-            placeholder="Nombre completo"
-            required>
+<input type="tel" name="telefono" placeholder="Teléfono" required>
 
-            <input type="tel"
-            name="telefono"
-            placeholder="Teléfono"
-            minlength="10"
-            required>
+<input type="email" name="email" placeholder="Correo electrónico" required>
 
-            <input type="email"
-            name="email"
-            placeholder="Correo electrónico"
-            required>
+<input type="number" name="edad" placeholder="Edad">
 
-            <input type="number"
-            name="edad"
-            placeholder="Edad">
+<select name="escolaridad" required>
 
-            <select name="escolaridad" required>
+<option value="">Escolaridad</option>
+<option>Preparatoria con certificado</option>
+<option>Universidad</option>
+<option>Superior</option>
 
-                <option value="">
-                    Escolaridad
-                </option>
+</select>
 
-                <option>
-                    Preparatoria con certificado
-                </option>
+<select name="ocupacion">
 
-                <option>
-                    Universidad
-                </option>
+<option value="">Ocupación actual</option>
+<option>Empleado</option>
+<option>Independiente</option>
+<option>Ventas</option>
+<option>Desempleado</option>
 
-                <option>
-                    Superior
-                </option>
+</select>
 
-            </select>
+<select name="ventas">
 
-            <select name="ocupacion">
+<option value="">¿Has vendido antes?</option>
+<option>Sí</option>
+<option>No</option>
 
-                <option value="">
-                    Ocupación actual
-                </option>
+</select>
 
-                <option>
-                    Empleado
-                </option>
+<button type="submit">
+Quiero información
+</button>
 
-                <option>
-                    Independiente
-                </option>
+</form>
 
-                <option>
-                    Ventas
-                </option>
-
-                <option>
-                    Desempleado
-                </option>
-
-                <option>
-                    Otro
-                </option>
-
-            </select>
-
-            <select name="ventas">
-
-                <option value="">
-                    ¿Has vendido antes?
-                </option>
-
-                <option>
-                    Sí
-                </option>
-
-                <option>
-                    No
-                </option>
-
-            </select>
-
-            <button type="submit" id="btnAgente">
-                Quiero información
-            </button>
-
-            <div class="loader" id="loaderAgente">
-                Enviando información...
-            </div>
-
-            <p class="small">
-                Tus datos están protegidos.
-            </p>
-
-        </form>
-
-    </div>
+</div>
 
 </div>
 
@@ -525,87 +369,44 @@ body{
 
 <div id="clientes" class="section">
 
-    <h2>Protege tu futuro hoy</h2>
+<h2>Protege tu futuro hoy</h2>
 
-    <p class="text">
-        Te ayudamos a tomar decisiones inteligentes para proteger a tu familia, tu patrimonio y tu futuro financiero.
-        <br><br>
-        Analizamos tu situación y te recomendamos la mejor solución.
-    </p>
+<div class="form-box">
 
-    <div class="form-box">
+<form onsubmit="enviarFormulario(event, 'Cliente')">
 
-        <form onsubmit="enviarFormulario(event, 'Cliente')">
+<input type="hidden" name="tipo" value="Cliente">
 
-            <input type="hidden" name="tipo" value="Cliente">
+<input type="text" name="nombre" placeholder="Nombre completo" required>
 
-            <input type="text"
-            name="nombre"
-            placeholder="Nombre completo"
-            required>
+<input type="tel" name="telefono" placeholder="Teléfono" required>
 
-            <input type="tel"
-            name="telefono"
-            placeholder="Teléfono"
-            minlength="10"
-            required>
+<input type="email" name="email" placeholder="Correo electrónico" required>
 
-            <input type="email"
-            name="email"
-            placeholder="Correo electrónico"
-            required>
+<input type="number" name="edad" placeholder="Edad">
 
-            <input type="number"
-            name="edad"
-            placeholder="Edad">
+<select name="interes" multiple size="6">
 
-            <select name="interes" multiple size="6">
+<option value="Plan de Educación">Plan de Educación</option>
+<option value="Plan de Ahorro">Plan de Ahorro</option>
+<option value="Plan de Inversión">Plan de Inversión</option>
+<option value="Plan de Retiro">Plan de Retiro</option>
+<option value="Plan de Protección">Plan de Protección</option>
+<option value="Gastos Médicos Mayores">Gastos Médicos Mayores</option>
 
-                <option value="Plan de Educación">
-                    Plan de Educación
-                </option>
+</select>
 
-                <option value="Plan de Ahorro">
-                    Plan de Ahorro
-                </option>
+<p class="small">
+Puedes seleccionar varias opciones usando CTRL
+</p>
 
-                <option value="Plan de Inversión">
-                    Plan de Inversión
-                </option>
+<button type="submit">
+Solicitar asesoría
+</button>
 
-                <option value="Plan de Retiro">
-                    Plan de Retiro
-                </option>
+</form>
 
-                <option value="Plan de Protección">
-                    Plan de Protección
-                </option>
-
-                <option value="Gastos Médicos Mayores">
-                    Gastos Médicos Mayores
-                </option>
-
-            </select>
-
-            <p class="small">
-                Puedes seleccionar varias opciones usando CTRL.
-            </p>
-
-            <button type="submit" id="btnCliente">
-                Solicitar asesoría
-            </button>
-
-            <div class="loader" id="loaderCliente">
-                Enviando información...
-            </div>
-
-            <p class="small">
-                Un asesor certificado te contactará.
-            </p>
-
-        </form>
-
-    </div>
+</div>
 
 </div>
 
@@ -613,59 +414,35 @@ body{
 
 <div class="section">
 
-    <h2>Preguntas frecuentes</h2>
+<h2>Preguntas frecuentes</h2>
 
-    <div class="faq-container">
+<div class="faq-container">
 
-        <div class="faq-item">
+<div class="faq-item">
 
-            <button class="faq-question">
-                ¿Necesito experiencia para ser agente?
-            </button>
+<button class="faq-question">
+¿Necesito experiencia para ser agente?
+</button>
 
-            <div class="faq-answer">
-                No. Nosotros te capacitamos y acompañamos durante todo el proceso.
-            </div>
+<div class="faq-answer">
+No. Nosotros te capacitamos.
+</div>
 
-        </div>
+</div>
 
-        <div class="faq-item">
+<div class="faq-item">
 
-            <button class="faq-question">
-                ¿Qué tipo de seguros manejan?
-            </button>
+<button class="faq-question">
+¿La asesoría tiene costo?
+</button>
 
-            <div class="faq-answer">
-                Planes de ahorro, retiro, protección, educación y gastos médicos mayores.
-            </div>
+<div class="faq-answer">
+No. Es completamente gratuita.
+</div>
 
-        </div>
+</div>
 
-        <div class="faq-item">
-
-            <button class="faq-question">
-                ¿La asesoría tiene costo?
-            </button>
-
-            <div class="faq-answer">
-                No. La asesoría es completamente personalizada y sin costo.
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-                ¿Puedo generar ingresos altos como agente?
-            </button>
-
-            <div class="faq-answer">
-                Sí. El crecimiento depende de desempeño, constancia y desarrollo profesional.
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </div>
 
@@ -673,36 +450,32 @@ body{
 
 <div class="modal" id="modal">
 
-    <div class="modal-content">
+<div class="modal-content">
 
-        <div class="check">
-            ✓
-        </div>
+<div class="check">✓</div>
 
-        <h3>
-            Información enviada
-        </h3>
+<h3>Información enviada</h3>
 
-        <p id="modal-text"></p>
+<p id="modal-text"></p>
 
-        <button onclick="cerrarModal()">
-            Cerrar
-        </button>
+<button onclick="cerrarModal()">
+Cerrar
+</button>
 
-    </div>
+</div>
 
 </div>
 
 <!-- FOOTER -->
 
 <footer class="footer">
-    © 2026 Vitalia Protection. Todos los derechos reservados.
+© 2026 Vitalia Protection. Todos los derechos reservados.
 </footer>
 
-<!-- WHATSAPP FLOAT -->
+<!-- WHATSAPP -->
 
 <a
-href="https://wa.me/527221939613?text=Hola%20Vitalia%20Protection,%20me%20gustaría%20recibir%20información."
+href="https://wa.me/527221939613?text=Hola%20me%20gustaría%20recibir%20información%20sobre%20Vitalia%20Protection"
 class="whatsapp-float"
 target="_blank">
 
@@ -714,74 +487,58 @@ target="_blank">
 
 async function enviarFormulario(e, tipo){
 
-    e.preventDefault();
+e.preventDefault();
 
-    const form = e.target;
+const form = e.target;
 
-    const data = new FormData(form);
+const data = new FormData(form);
 
-    const btn =
-    tipo === "Agente"
-    ? document.getElementById("btnAgente")
-    : document.getElementById("btnCliente");
+try{
 
-    const loader =
-    tipo === "Agente"
-    ? document.getElementById("loaderAgente")
-    : document.getElementById("loaderCliente");
+const response = await fetch(
+"https://script.google.com/macros/s/AKfycbx_94259xjIio-jjACjGyhNP6YaPAhvVo7R1LbJnvUjmiqK1ZGvgU4o0D70IbdNTKMiHA/exec",
+{
+method:"POST",
+body:data
+});
 
-    btn.disabled = true;
-    loader.style.display = "block";
+const text = await response.text();
 
-    try{
+if(text.includes("OK")){
 
-        const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbylfhv8GoykjeR2YI5bZ895jVcNQAG2GTPunI2AXqIVkiwCEb4545nswv09UYTvZGmJ4g/exec",
-        {
-            method:"POST",
-            body:data
-        });
+document.getElementById("modal").style.display = "flex";
 
-        const text = await response.text();
+if(tipo === "Agente"){
 
-        if(text.includes("OK")){
+document.getElementById("modal-text").innerText =
+"Hemos recibido tu información. Nuestro equipo te contactará.";
 
-            document.getElementById("modal").style.display = "flex";
+}else{
 
-            if(tipo === "Agente"){
+document.getElementById("modal-text").innerText =
+"Gracias por tu interés. Un asesor te contactará.";
 
-                document.getElementById("modal-text").innerText =
-                "Hemos recibido tu información. Nuestro equipo te contactará para iniciar tu proceso como agente.";
+}
 
-            }else{
+form.reset();
 
-                document.getElementById("modal-text").innerText =
-                "Gracias por tu interés. Un asesor se pondrá en contacto contigo para brindarte la mejor opción.";
+}else{
 
-            }
+alert(text);
 
-            form.reset();
+}
 
-        }else{
+}catch(error){
 
-            alert("Ocurrió un error al enviar la información.");
+alert("Error de conexión");
 
-        }
-
-    }catch(error){
-
-        alert("Error de conexión.");
-
-    }
-
-    btn.disabled = false;
-    loader.style.display = "none";
+}
 
 }
 
 function cerrarModal(){
 
-    document.getElementById("modal").style.display = "none";
+document.getElementById("modal").style.display = "none";
 
 }
 
@@ -792,22 +549,22 @@ document.querySelectorAll(".faq-question");
 
 preguntas.forEach(pregunta => {
 
-    pregunta.addEventListener("click", () => {
+pregunta.addEventListener("click", () => {
 
-        const respuesta =
-        pregunta.nextElementSibling;
+const respuesta =
+pregunta.nextElementSibling;
 
-        if(respuesta.style.display === "block"){
+if(respuesta.style.display === "block"){
 
-            respuesta.style.display = "none";
+respuesta.style.display = "none";
 
-        }else{
+}else{
 
-            respuesta.style.display = "block";
+respuesta.style.display = "block";
 
-        }
+}
 
-    });
+});
 
 });
 
