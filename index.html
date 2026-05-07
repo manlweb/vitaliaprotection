@@ -203,10 +203,6 @@ body{
     margin:0 auto 20px auto;
 }
 
-.modal h3{
-    margin-top:0;
-}
-
 .modal button{
     margin-top:20px;
     padding:12px 22px;
@@ -223,6 +219,51 @@ body{
     margin-top:15px;
     color:#0079c2;
     font-weight:bold;
+}
+
+/* FAQ */
+
+.faq-container{
+    max-width:900px;
+    margin:40px auto;
+    text-align:left;
+}
+
+.faq-item{
+    background:white;
+    margin-bottom:15px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.faq-question{
+    width:100%;
+    padding:20px;
+    border:none;
+    background:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:left;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 20px 20px 20px;
+    color:#555;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#02131c;
+    color:#8aa4b3;
+    text-align:center;
+    padding:25px 15px;
+    font-size:14px;
+    border-top:1px solid rgba(255,255,255,0.08);
 }
 
 @keyframes fadeIn{
@@ -255,6 +296,7 @@ body{
     </p>
 
     <div class="buttons">
+
         <a href="#reclutamiento" class="btn btn-primary">
             Quiero ser agente
         </a>
@@ -262,6 +304,7 @@ body{
         <a href="#clientes" class="btn btn-secondary">
             Quiero cotizar seguro
         </a>
+
     </div>
 
 </div>
@@ -540,6 +583,66 @@ body{
 
 </div>
 
+<!-- FAQ -->
+
+<div class="section">
+
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Necesito experiencia para ser agente?
+            </button>
+
+            <div class="faq-answer">
+                No. Nosotros te capacitamos y acompañamos durante todo el proceso.
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Qué tipo de seguros manejan?
+            </button>
+
+            <div class="faq-answer">
+                Planes de ahorro, retiro, protección, educación y gastos médicos mayores.
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿La asesoría tiene costo?
+            </button>
+
+            <div class="faq-answer">
+                No. La asesoría es completamente personalizada y sin costo.
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Puedo generar ingresos altos como agente?
+            </button>
+
+            <div class="faq-answer">
+                Sí. El crecimiento depende de desempeño, constancia y desarrollo profesional.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 <!-- MODAL -->
 
 <div class="modal" id="modal">
@@ -563,6 +666,12 @@ body{
     </div>
 
 </div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+    © 2026 Vitalia Protection. Todos los derechos reservados.
+</footer>
 
 <script>
 
@@ -638,6 +747,32 @@ function cerrarModal(){
     document.getElementById("modal").style.display = "none";
 
 }
+
+/* FAQ */
+
+const preguntas =
+document.querySelectorAll(".faq-question");
+
+preguntas.forEach(pregunta => {
+
+    pregunta.addEventListener("click", () => {
+
+        const respuesta =
+        pregunta.nextElementSibling;
+
+        if(respuesta.style.display === "block"){
+
+            respuesta.style.display = "none";
+
+        }else{
+
+            respuesta.style.display = "block";
+
+        }
+
+    });
+
+});
 
 </script>
 
