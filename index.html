@@ -19,7 +19,7 @@ body{
 .header{
     text-align:center;
     padding:80px 20px;
-    background: linear-gradient(135deg,#0a3c53,#02131c);
+    background:linear-gradient(135deg,#0a3c53,#02131c);
 }
 
 .logo-box{
@@ -164,6 +164,32 @@ body{
     margin-top:10px;
 }
 
+/* PRIVACIDAD */
+
+.privacy-check{
+    display:block;
+    margin-top:15px;
+    font-size:14px;
+    color:#555;
+    text-align:left;
+    line-height:1.5;
+}
+
+.privacy-check input{
+    width:auto;
+    margin-right:8px;
+}
+
+.privacy-check a{
+    color:#0079c2;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.privacy-check a:hover{
+    text-decoration:underline;
+}
+
 /* MODAL */
 
 .modal{
@@ -266,6 +292,15 @@ body{
     border-top:1px solid rgba(255,255,255,0.08);
 }
 
+.footer a{
+    color:#8aa4b3;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    text-decoration:underline;
+}
+
 /* WHATSAPP */
 
 .whatsapp-float{
@@ -344,7 +379,7 @@ body{
     <h2>¿Quiénes somos?</h2>
 
     <p class="text">
-        Vitalia Protection es socio comercial de Seguros Monterrey New York Life dedicado a formar agentes profesionales y asesorar a personas en la protección de su patrimonio.
+        Vitalia Protection SC es socio comercial de Seguros Monterrey New York Life dedicado a formar agentes profesionales y asesorar a personas en la protección de su patrimonio.
         <br><br>
         Nuestro enfoque combina desarrollo profesional, educación financiera y acompañamiento constante para lograr crecimiento real.
     </p>
@@ -391,29 +426,11 @@ body{
 
 </div>
 
-<!-- OPORTUNIDAD -->
-
-<div class="section">
-
-    <h2>Convierte tu talento en ingresos reales</h2>
-
-    <p class="text">
-        Si buscas independencia económica, crecimiento profesional y una carrera en el sector financiero, esta es tu oportunidad.
-        <br><br>
-        No necesitas experiencia previa, nosotros te capacitamos.
-    </p>
-
-</div>
-
 <!-- FORM AGENTE -->
 
 <div id="reclutamiento" class="section">
 
     <h2>Únete como agente</h2>
-
-    <p class="text">
-        Da el primer paso hacia una carrera con ingresos ilimitados. Déjanos tus datos y uno de nuestros asesores te explicará cómo iniciar.
-    </p>
 
     <div class="form-box">
 
@@ -421,87 +438,39 @@ body{
 
             <input type="hidden" name="tipo" value="Agente">
 
-            <input type="text"
-            name="nombre"
-            placeholder="Nombre completo"
-            required>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-            <input type="tel"
-            name="telefono"
-            placeholder="Teléfono"
-            minlength="10"
-            required>
+            <input type="tel" name="telefono" placeholder="Teléfono" minlength="10" required>
 
-            <input type="email"
-            name="email"
-            placeholder="Correo electrónico"
-            required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
 
-            <input type="number"
-            name="edad"
-            placeholder="Edad">
+            <input type="number" name="edad" placeholder="Edad">
 
             <select name="escolaridad" required>
 
-                <option value="">
-                    Escolaridad
-                </option>
-
-                <option>
-                    Preparatoria con certificado
-                </option>
-
-                <option>
-                    Universidad
-                </option>
-
-                <option>
-                    Superior
-                </option>
+                <option value="">Escolaridad</option>
+                <option>Preparatoria con certificado</option>
+                <option>Universidad</option>
+                <option>Superior</option>
 
             </select>
 
             <select name="ocupacion">
 
-                <option value="">
-                    Ocupación actual
-                </option>
-
-                <option>
-                    Empleado
-                </option>
-
-                <option>
-                    Independiente
-                </option>
-
-                <option>
-                    Ventas
-                </option>
-
-                <option>
-                    Desempleado
-                </option>
-
-                <option>
-                    Otro
-                </option>
+                <option value="">Ocupación actual</option>
+                <option>Empleado</option>
+                <option>Independiente</option>
+                <option>Ventas</option>
+                <option>Desempleado</option>
+                <option>Otro</option>
 
             </select>
 
             <select name="ventas">
 
-                <option value="">
-                    ¿Has vendido antes?
-                </option>
-
-                <option>
-                    Sí
-                </option>
-
-                <option>
-                    No
-                </option>
+                <option value="">¿Has vendido antes?</option>
+                <option>Sí</option>
+                <option>No</option>
 
             </select>
 
@@ -513,8 +482,17 @@ body{
                 Enviando información...
             </div>
 
+            <label class="privacy-check">
+                <input type="checkbox" required>
+
+                He leído y acepto el
+                <a href="#privacidad">
+                    Aviso de Privacidad
+                </a>.
+            </label>
+
             <p class="small">
-                Tus datos están protegidos.
+                Tus datos están protegidos y serán utilizados únicamente para fines de contacto y asesoría.
             </p>
 
         </form>
@@ -529,63 +507,28 @@ body{
 
     <h2>Protege tu futuro hoy</h2>
 
-    <p class="text">
-        Te ayudamos a tomar decisiones inteligentes para proteger a tu familia, tu patrimonio y tu futuro financiero.
-        <br><br>
-        Analizamos tu situación y te recomendamos la mejor solución.
-    </p>
-
     <div class="form-box">
 
         <form onsubmit="enviarFormulario(event, 'Cliente')">
 
             <input type="hidden" name="tipo" value="Cliente">
 
-            <input type="text"
-            name="nombre"
-            placeholder="Nombre completo"
-            required>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-            <input type="tel"
-            name="telefono"
-            placeholder="Teléfono"
-            minlength="10"
-            required>
+            <input type="tel" name="telefono" placeholder="Teléfono" minlength="10" required>
 
-            <input type="email"
-            name="email"
-            placeholder="Correo electrónico"
-            required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
 
-            <input type="number"
-            name="edad"
-            placeholder="Edad">
+            <input type="number" name="edad" placeholder="Edad">
 
             <select name="interes" multiple size="6">
 
-                <option value="Plan de Educación">
-                    Plan de Educación
-                </option>
-
-                <option value="Plan de Ahorro">
-                    Plan de Ahorro
-                </option>
-
-                <option value="Plan de Inversión">
-                    Plan de Inversión
-                </option>
-
-                <option value="Plan de Retiro">
-                    Plan de Retiro
-                </option>
-
-                <option value="Plan de Protección">
-                    Plan de Protección
-                </option>
-
-                <option value="Gastos Médicos Mayores">
-                    Gastos Médicos Mayores
-                </option>
+                <option value="Plan de Educación">Plan de Educación</option>
+                <option value="Plan de Ahorro">Plan de Ahorro</option>
+                <option value="Plan de Inversión">Plan de Inversión</option>
+                <option value="Plan de Retiro">Plan de Retiro</option>
+                <option value="Plan de Protección">Plan de Protección</option>
+                <option value="Gastos Médicos Mayores">Gastos Médicos Mayores</option>
 
             </select>
 
@@ -600,6 +543,15 @@ body{
             <div class="loader" id="loaderCliente">
                 Enviando información...
             </div>
+
+            <label class="privacy-check">
+                <input type="checkbox" required>
+
+                He leído y acepto el
+                <a href="#privacidad">
+                    Aviso de Privacidad
+                </a>.
+            </label>
 
             <p class="small">
                 Un asesor certificado te contactará.
@@ -655,19 +607,35 @@ body{
 
         </div>
 
-        <div class="faq-item">
-
-            <button class="faq-question">
-                ¿Puedo generar ingresos altos como agente?
-            </button>
-
-            <div class="faq-answer">
-                Sí. El crecimiento depende de desempeño, constancia y desarrollo profesional.
-            </div>
-
-        </div>
-
     </div>
+
+</div>
+
+<!-- AVISO DE PRIVACIDAD -->
+
+<div class="section" id="privacidad">
+
+    <h2>
+        Aviso de Privacidad
+    </h2>
+
+    <p class="text">
+
+        Vitalia Protection SC es responsable del tratamiento de los datos personales proporcionados a través de este sitio web.
+
+        <br><br>
+
+        La información recopilada será utilizada únicamente para fines de contacto, seguimiento comercial, asesoría financiera, reclutamiento y atención personalizada.
+
+        <br><br>
+
+        Vitalia Protection SC se compromete a proteger la confidencialidad de los datos proporcionados y no compartirlos con terceros sin autorización, salvo obligación legal.
+
+        <br><br>
+
+        Al enviar cualquiera de los formularios de este sitio, el usuario acepta el tratamiento de sus datos conforme al presente aviso de privacidad.
+
+    </p>
 
 </div>
 
@@ -709,7 +677,18 @@ target="_blank">
 <!-- FOOTER -->
 
 <footer class="footer">
-    © 2026 Vitalia Protection. Todos los derechos reservados.
+
+    <p>
+        © 2026 Vitalia Protection SC.
+        Todos los derechos reservados.
+    </p>
+
+    <p>
+        <a href="#privacidad">
+            Aviso de Privacidad
+        </a>
+    </p>
+
 </footer>
 
 <script>
