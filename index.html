@@ -106,9 +106,19 @@
 		transition:0.3s;
 	}
 
-	.card:hover{
-		transform:translateY(-5px);
-	}
+	.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:transform 0.3s ease,
+               box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
 	
     /* INFO BOXES */
 
